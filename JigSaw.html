@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/output.css" />
+
+    <!-- jquery starting-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="index.js"></script>
+    <!-- jquery ending-->
+
+    <title>JigsawPuzzle</title>
+  </head>
+
+  <body class="bg-blue-500">
+    <div class="text-center">
+      <button
+        id="easy"
+        class="m-6 rounded bg-blue-700 p-2 px-4 text-lg text-white"
+        onclick="easyPuzzle()">
+        Easy
+      </button>
+      <button
+        id="medium"
+        class="m-6 rounded bg-blue-700 p-2 px-4 text-lg text-white"
+        onclick="mediumPuzzle()">
+        Medium
+      </button>
+      <button
+        id="hard"
+        class="m-6 rounded bg-blue-700 p-2 px-4 text-lg text-white"
+        onclick="hardPuzzle()">
+        Hard
+      </button>
+
+      <hr class="mx-auto w-[90%] max-w-[1080px]" />
+      <div class="mt-10 text-2xl text-white">
+        Total Moves: <span id="counter">0</span>
+      </div>
+      <ul
+        id="sortable"
+        class="mx-auto mb-10 mt-10 grid w-[90%] max-w-[1080px] grid-cols-4 border-4 border-blue-600"></ul>
+      <hr class="mx-auto w-[90%] max-w-[1080px]" />
+    </div>
+  </body>
+</html>
