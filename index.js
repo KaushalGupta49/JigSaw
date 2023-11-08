@@ -1,8 +1,8 @@
 // generates random number in array
 function generateRandomArray(n) {
-  var arr = Array.from({ length: n }, (_, i) => i + 1);
+  const arr = Array.from({ length: n }, (_, i) => i + 1);
   for (let i = arr.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
 
@@ -10,18 +10,18 @@ function generateRandomArray(n) {
 }
 
 // generate puzzle checklist == for check Completion of puzzle
-var counter = 0;
+let counter = 0;
 function puzzleCheckList() {
   const newLis = document.getElementById('sortable').children;
-  var iniArr = [];
+  const iniArr = [];
   for (let i = 1; i <= newLis.length; i++) {
-    let num = i.toString();
+    const num = i.toString();
     iniArr.push(num);
   }
   window.iniArr = iniArr;
 }
 
-//list Generation and Styling
+// list Generation and Styling
 function listGen(item) {
   return `<li class="h-32 border-2 border-blue-400 bg-blue-700 py-12 text-center text-2xl text-white">
       ${item}
@@ -78,13 +78,12 @@ $(function () {
   $('#sortable').sortable({
     update: function (event, ui) {
       document.getElementById('counter').innerHTML = ++counter;
-
       const lis = document.getElementById('sortable').children;
-      var arr = [];
+      const arr = [];
       for (let i = 0; i < lis.length; i++) {
         arr.push(lis[i].innerText);
       }
-      if (arr.toString() == iniArr.toString()) {
+      if (arr.toString() === iniArr.toString()) {
         alert('Congratulations! Puzzle Solved.');
       }
     },
