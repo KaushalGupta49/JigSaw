@@ -9,9 +9,9 @@ function generateRandomArray(n) {
 }
 
 // generate puzzle checklist == for check Completion of puzzle
-let counter = 0;
+var counter = 0;
 function puzzleCheckList() {
-  const newLis = $("#sortable").children()
+  const newLis = $("#sortable").children();
   const iniArr = [];
   for (let i = 1; i <= newLis.length; i++) {
     const num = i.toString();
