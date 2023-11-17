@@ -4,6 +4,10 @@
     "trailingComma": "es5",
     "pluginSearchDirs": false,
     "bracketSameLine": true,
+    "htmlWhitespaceSensitivity": "ignore",
+    "singleAttributePerLine": false,
+    "embeddedLanguageFormatting": "auto",
+    "endOfLine": "auto",
     "plugins": [
         "prettier-plugin-tailwindcss"
     ]
